@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <head>
+        <h1 class="logo">Luca's Coffe</h1>
+    </head>
+    <main>
+
+        <section class="principal">
+            <section class="container__dados">
+                <h2 class="subtitulo__um">Dados do Pedido</h2><br>
+                <label for="Numero">Número do Pedido</label>
+                <input type="text" name="N__Pedido" class="numeric">
+                <label for="Numero">Mesa</label>
+                <input type="text" name="N__Pedido" class="numeric">
+                <label for="Cyber">Cyber</label>
+                <select name="opcoes" id="Cyber" class="cyber">
+                    <option value="Sim" selected>Sim</option>
+                    <option value="Nao">Não</option>
+                </select>
+                <label for="Nome">Nome do Cliente</label>
+                <input type="text" name="letras" class="cliente letras">
+            </section>
+            <div class="consumo">
+                <label for="Consumo">Consumo</label>
+                <textarea id="consumo" class="input__consumo" cols="30" rows="10"></textarea>
+            </div>
+        </section>
+
+        <section class="secundaria">
+            <section class="container__valores">
+                <div class="total">
+                    <label for="Total__Geral">Total Geral</label>
+                    <input type="text" name="Geral" class="valor">
+                    <h5 class="total">Data de hoje: <p id="data"></p>
+                    </h5>
+                </div>
+            </section>
+        </section>
+
+    </main>
+    <footer></footer>
+    <script>
+        $(document).ready(function () {
+            $('.numeric').mask('000');
+        });
+        $('.letras').mask('SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS', {//Nome do cliente
+            translation: {
+                'S': { pattern: /[A-Za-z]/ }
+            }
+        });
+        $(document).ready(function () {
+            $('.valor').mask('R$ 990,00', { reverse: true });
+        });
+        $(document).ready(function () {
+            $('#consumo').keypress(function (event) {
+                if (event.keyCode === 13) {
+                    var text = $(this).val();
+                    $(this).val(text + "\n");
+                    event.preventDefault();
+                }
+            });
+        });
+        $(document).ready(function () {
+            var dataAtual = new Date();
+            var dia = dataAtual.getDate();
+            var mes = dataAtual.getMonth() + 1;
+            var ano = dataAtual.getFullYear();
+
+            var dataFormatada = dia + "/" + mes + "/" + ano;
+
+            $("#data").text(dataFormatada);
+        });
+    </script>
+
+</body>
+
+</html>

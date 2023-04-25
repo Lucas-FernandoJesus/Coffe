@@ -1,0 +1,112 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+:root{
+    --cor-principal: #8E8E8E;
+    --cor-secundaria: #404040;
+    --cor-terciaria: #FFFFFF;
+    --fonte: 'Italianno', cursive;
+}
+
+body{
+    background-color: var(--cor-principal);
+    font-family: var(--fonte);
+    color: var(--cor-terciaria);
+    margin-left: 15%;
+    margin-top: 7%;
+}
+
+.logo{
+    font-size: 4rem;
+    background-color: var(--cor-secundaria);
+    padding: 5px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 30px;
+    width: 71vw;
+}
+
+.subtitulo__um{
+    margin-left: 15px;
+    float: top;
+    margin-top: -8%;
+}
+
+.principal{
+    display: flex;
+    justify-content: space-around;
+    width: 70vw;
+    align-items: left;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: var(--cor-secundaria);
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+.container__dados{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 24px;
+    width: 15%;
+    border-radius: 15px;
+}
+
+.cyber{
+    margin-top: 2px;
+}
+
+.cliente{
+    margin-top: 2px;
+}
+
+#input{
+    display: contents;
+    width: 20%;
+}
+
+
+.input__consumo{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 175%;
+    float: left;
+    margin-left: -35%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.consumo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+}
+
+.secundaria{
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+    align-items: left;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: var(--cor-secundaria);
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+.container__valores{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.total{
+    
+}
+
+.valor{
+    margin-left: 10px;
+}
